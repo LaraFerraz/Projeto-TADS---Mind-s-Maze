@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind`s Maze</title>
+
+    <link href="style.css" rel="stylesheet">
+    <link href="images/logo.png" rel="shortcut icon">
+</head>
+<body>
+    <header>
+        <div class="grid">
+            <div class="grid-son">
+                <a href="index.html" title="home">
+                <img src="images/logo.png" title="logo jogo">
+                </a>
+            </div>
+            <div class="grid-son">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">HOME </a></li>
+                        <li><a href="index.html#sobre">SOBRE </a></li>
+                        <li><a href="galeria.html">GALERIA </a></li>
+                        <li><a href="contato.html">CONTATO </a></li>
+                        <li><a href="jogar.html" class="btn"> JOGAR </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="contato">
+            <h2> ENTRE EM CONTATO </h2>
+            <form id="form">
+                <label> Nome: </label>
+                <input type="text" id="nome">
+                <label> Email: </label>
+                <input type="email" id="email">
+                <label> Comentário: </label>
+                <input type="text" id="comentario">
+                <button type="button" id="botao"> Enviar </button>
+            </form>
+            <script>
+                //captura o botão pleo ID e adiciona um evento de clique
+                document.getElementById("botao").onclick=function(){
+                    //obtém o valor dos campos nome,email,comentário
+                    var nome=document.getElementById("nome").value;
+                    var email=document.getElementById("email").value;
+                    var comentario=document.getElementById("comentario").value;
+
+                    //verifica se todos os campos estão vazios ao mesmo tempo
+                    if (nome == "" && email == "" &&  comentario == ""){
+                        alert ("Todos os campos devem estar preenchidos"); // exibe um alerta para o preenchimento dos campos
+                    } else {
+                        // verifica individualmente o preenchimento dos campos 
+                        if(nome == "") {
+                            alert (" Informe o nome");
+                        }
+
+                        if (email == "") {
+                            alert ("Informe o email");
+                        }
+
+                        if (comentario == "") {
+                            alert ("Escreva seu comentário");
+                        }
+                    }
+
+                    //confima que todos os campos foram preenchidos 
+                    if (nome !="" && email != "" && comentario != "")
+                    alert ("Enviado com sucesso!");
+                };
+            </script>
+        </section>
+    </main>
+
+    <footer>
+        <p> <img src="images/logo.png" alt="logo jogo"> </p>
+        <p> Desenvolvido por Lara Pereira Ferraz </p>
+    </footer>
+</body>
+</html>
