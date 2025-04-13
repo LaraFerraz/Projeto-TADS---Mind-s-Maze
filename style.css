@@ -179,12 +179,22 @@ body {
 
 
 form {
+    
     label {
-        font-family: Roboto;
-        width: 100%;
+        left: 10px;
+        margin-right:5px;
+        padding: 10px;
+        
+    }
+    input {
+        width: 90%;
+        margin: 5px 0;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        
     }
     .form {
-        font-family: Roboto;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         width: 100%;
         border: 1px solid #CCC;
         border-radius: 10px;
@@ -204,16 +214,3 @@ form {
     }
 }
 
-@media screen and (max-width: 480px) {
-
-    .grid_2{
-        display: block;
-        img {
-            width: 20%;
-        }
-        .col {
-            margin: 10px;
-        }
-    }
-    
-}
