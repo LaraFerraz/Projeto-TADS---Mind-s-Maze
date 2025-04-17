@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mind`s Maze</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link href="style.css" rel="stylesheet">
     <link href="images/logo.png" rel="shortcut icon">
@@ -17,6 +18,9 @@
                 </a>
             </div>
             <div class="grid-son">
+                <a href="javascript:mostrarmenu()" class="menu">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
                 <nav>
                     <ul>
                         <li><a href="index.html">HOME </a></li>
@@ -58,7 +62,11 @@
         <p> <img src="images/logo.png" alt="logo jogo"> </p>
         <p> Desenvolvido por Lara Pereira Ferraz </p>
     </footer>
-    
+    <script>
+        function mostrarmenu() {
+            document.querySelector("header nav").classList.toggle ("mostrar");
+        }
+    </script>
 
 </body>
 </html>

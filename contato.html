@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mind`s Maze</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link href="style.css" rel="stylesheet">
     <link href="images/logo.png" rel="shortcut icon">
@@ -17,6 +18,9 @@
                 </a>
             </div>
             <div class="grid-son">
+                <a href="javascript:mostrarmenu()" class="menu">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
                 <nav>
                     <ul>
                         <li><a href="index.html">HOME </a></li>
@@ -31,37 +35,38 @@
     </header>
     <main>
         <section class="contato">
-            <h2> ENTRE EM CONTATO </h2>
-            <div class="grid-form">
-            <form id="form">
-                <label for="nome">Nome:</label>
-                <br>
-                <input type="text" id="nome">
-                <br>
-                <label for="email">Email:</label>
-                <br>
-                <input type="email" id="email" >
-                <br>
-                <label for="comentario">Comentário:</label>
-                <br>
-                <input type="text" id="comentario">
-                <br>
-                <button type="button" id="botao">Enviar</button>
-                <input type="submit" class="btn">
-            </form>
-            <script>
-                //captura o botão pleo ID e adiciona um evento de clique
-                document.getElementById("botao").onclick=function(){
-                    //obtém o valor dos campos nome,email,comentário
-                    var nome=document.getElementById("nome").value;
-                    var email=document.getElementById("email").value;
-                    var comentario=document.getElementById("comentario").value;
+            <div class="formulario">
+                <div class="col">
+                    <h2> ENTRE EM CONTATO </h2>
+                    <form id="form">
+                        <label for="nome">Nome:</label>
+                        <br>
+                        <input type="text" id="nome">
+                        <br>
+                        <label for="email">Email:</label>
+                        <br>
+                        <input type="email" id="email" >
+                        <br>
+                        <label for="comentario">Comentário:</label>
+                        <br>
+                        <input type="text" id="comentario">
+                        <br>
+                        <button type="button" id="botao">Enviar</button>
+                        
+                    </form>
+                    <script>
+                        //captura o botão pleo ID e adiciona um evento de clique
+                         document.getElementById("botao").onclick=function(){
+                        //obtém o valor dos campos nome,email,comentário
+                        var nome=document.getElementById("nome").value;
+                        var email=document.getElementById("email").value;
+                        var comentario=document.getElementById("comentario").value;
 
-                    //verifica se todos os campos estão vazios ao mesmo tempo
-                    if (nome == "" && email == "" &&  comentario == ""){
-                        alert ("Todos os campos devem estar preenchidos"); // exibe um alerta para o preenchimento dos campos
-                    } else {
-                        // verifica individualmente o preenchimento dos campos 
+                        //verifica se todos os campos estão vazios ao mesmo tempo
+                        if (nome == "" && email == "" &&  comentario == ""){
+                            alert ("Todos os campos devem estar preenchidos"); // exibe um alerta para o preenchimento dos campos
+                         } else {
+                            // verifica individualmente o preenchimento dos campos 
                         if(nome == "") {
                             alert (" Informe o nome");
                         }
@@ -74,14 +79,17 @@
                         if (comentario == "") {
                             alert ("Escreva seu comentário");
                         }
-                    }
+                        }
 
-                    //confima que todos os campos foram preenchidos 
-                    if (nome !="" && email != "" && comentario != "")
-                    alert ("Enviado com sucesso!");
-                };
-            </script>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.524940765097!2d-52.38240969667715!3d-24.047812010005917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ed7540659ea6d1%3A0x1375c0952b412abd!2sAv.%20Irm%C3%A3os%20Pereira%2C%20670%20-%20Centro%2C%20Campo%20Mour%C3%A3o%20-%20PR%2C%2087300-010!5e0!3m2!1spt-BR!2sbr!4v1743031014214!5m2!1spt-BR!2sbr" width="50%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe>
+                        //confima que todos os campos foram preenchidos 
+                        if (nome !="" && email != "" && comentario != "")
+                        alert ("Enviado com sucesso!");
+                        };
+                    </script>
+                 </div>
+                <div class="col">
+                    <img src="images/banner.png" alt="imagem banner">
+                </div>
             </div>
         </section>
     </main>
@@ -90,5 +98,10 @@
         <p> <img src="images/logo.png" alt="logo jogo"> </p>
         <p> Desenvolvido por Lara Pereira Ferraz </p>
     </footer>
+    <script>
+        function mostrarmenu() {
+            document.querySelector("header nav").classList.toggle ("mostrar");
+        }
+    </script>
 </body>
 </html>
